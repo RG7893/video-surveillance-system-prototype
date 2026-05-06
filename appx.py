@@ -39,9 +39,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(me
 ])
 
 # AWS Configuration
-S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME', 'raj-veer-bucket-2024')
-AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', 'AKIA6IY352LW7AST2MXD')
-AWS_SECRET_KEY = os.getenv('AWS_SECRET_KEY', 'YbsHXTRhgtK12Cm3iWBqg1yoEkWRZaZcKXo7pCz1')
+S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME', '<Enter your Amazon S3 Bucket Name here.>')
+AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY', '<Enter your AWS IAM Access Key here.>')
+AWS_SECRET_KEY = os.getenv('AWS_SECRET_KEY', '<Enter your AWS IAM Secret Key here.>')
 
 # Video capture setup
 cap = cv2.VideoCapture(0)
