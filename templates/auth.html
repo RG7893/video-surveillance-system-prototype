@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" id="signIn">
+    <h1 class="form-title">Sign In</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required>
+            <label>Email</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required>
+            <label>Password</label>
+        </div>
+        <input type="submit" class="btn" value="Sign In">
+    </form>
+    <p class="or">---------- or ---------</p>
+    <div class="links">
+        <p>Don't have account yet?</p>
+        <button id="signUpButton">Sign Up</button>
+    </div>
+</div>
+
+<div class="container" id="signup" style="display:none;">
+    <h1 class="form-title">Sign Up</h1>
+    <form method="POST" action="{{ url_for('signup') }}">
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <label>First Name</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <label>Last Name</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required>
+            <label>Email</label>
+        </div>
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password" placeholder="Password" required>
+            <label>Password</label>
+        </div>
+        <input type="submit" class="btn" value="Sign Up">
+    </form>
+    <p class="or">---------- or ---------</p>
+    <div class="links">
+        <p>Already Have Account?</p>
+        <button id="signInButton">Sign In</button>
+    </div>
+</div>
+{% endblock %}

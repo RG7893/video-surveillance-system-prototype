@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="dashboard-container">
+    <h1>Welcome {{ user.first_name }} {{ user.last_name }}</h1>
+    <div class="nav-buttons">
+        <a href="{{ url_for('live_stream') }}" class="btn">Live Stream</a>
+        <a href="{{ url_for('recordings') }}" class="btn">Recordings</a>
+        <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Live Stream{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Live Stream</h1>
+    <div class="stream-container">
+        <h3>Status: {{ status }}</h3>
+        <img src="{{ url_for('stream') }}" alt="Live Stream">
+    </div>
+</div>
+{% endblock %}

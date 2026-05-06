@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Recordings{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Recordings</h1>
+    <div class="recordings-list">
+        {% for video in videos %}
+            <div class="recording-item">
+                <a href="https://{{ S3_BUCKET_NAME }}.s3.amazonaws.com/{{ video }}" target="_blank">
+                    {{ video }}
+                </a>
+                <form action="{{ url_for('delete_recording', video_key=video) }}" method="POST">
+                    <button type="submit" class="delete-btn">Delete</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
